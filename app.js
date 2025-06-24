@@ -1,13 +1,16 @@
 class bank {
-    constructor(branche1 ) {
+    constructor(branche1,branche2,branche3 ) {
         this.branche1 = branche1;
+        this.branche2 = branche2;
+        this.branche3 = branche3;
     }
 }
 
 class peshawarbranche extends bank {
-    constructor(branche1, account1) {
+    constructor(branche1, account1,account2) {
         super(branche1)
         this.account1 = account1;
+        this.account2 = account2;
 
     }
 }
@@ -35,7 +38,7 @@ class account1 extends peshawarbranche {
 }
 
 
-let acc1 = new account1("PeshawarBrance","Mehran",10000);
+let acc1 = new account1("PeshawarBranche","Mehran",10000);
 console.log(acc1.branche1)
 console.log(acc1.account1)
 console.log(acc1.getammount())
