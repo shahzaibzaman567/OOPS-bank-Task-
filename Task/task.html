@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <title>🤖 Robot Management Task - Instructions Only</title>
+  <style>
+    body {
+      font-family: "Noto Naskh Arabic", sans-serif;
+      padding: 20px;
+      line-height: 1.8;
+      background: #f7f7f7;
+      color: #222;
+    }
+    h1 {
+      color: #155724;
+      background: #d4edda;
+      padding: 10px;
+      border: 1px solid #c3e6cb;
+    }
+    ul {
+      background: #fff3cd;
+      padding: 20px;
+      border: 1px solid #ffeeba;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    code {
+      background: #e2e3e5;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Robot Management System - Task Instructions (Only)</h1>
+
+  <ul>
+    <li>آپ نے ایک ایسا system design کرنا ہے جس میں مختلف قسم کے AI Robots create کیے جائیں۔</li>
+
+    <li>اس project میں آپ کو درج ذیل concepts کو لازمی استعمال کرنا ہے:</li>
+    <ul>
+      <li>🔐 <strong>Encapsulation</strong>: ہر Robot کی private properties (جیسے ID, Model) encapsulate ہوں گی۔</li>
+      <li>🧠 <strong>Abstraction</strong>: Parent class میں abstract-style method ہوگا جیسے <code>getProfile()</code>، جو child classes override کریں گی۔</li>
+      <li>🧬 <strong>Inheritance</strong>: Parent class <code>Robot</code> سے child classes inherit کریں گی جیسے <code>CleaningRobot</code>, <code>SecurityRobot</code> وغیرہ۔</li>
+      <li>⚙️ <strong>Generator Function</strong>: Robot IDs یا names generate کرنے کے لیے generator function use ہوگا۔</li>
+      <li>🌐 <strong>Async + API</strong>: Real robot owner name لینے کے لیے external API سے async fetch ہوگا۔</li>
+    </ul>
+
+    <li>💻 <strong>UI میں کیا ہوگا؟</strong></li>
+    <ul>
+      <li>Bootstrap-based ایک card ہوگا جو robot details دکھائے گا۔</li>
+      <li>ایک button ہوگا: <code>Load Next Robot</code> — جس پر click کرنے سے ایک نیا robot create ہو گا۔</li>
+      <li>ہر بار card میں robot کا name, model, type اور assigned user کا نام آئے گا۔</li>
+      <li>10 robots create ہونے کے بعد button disable ہو جائے گا اور message آئے گا: <em>\"All robots have been loaded.\"</em></li>
+    </ul>
+
+    <li>📌 آپ یہ پورا کام ایک single HTML + JS + CSS page میں کرو گے۔</li>
+  </ul>
+
+</body>
+</html>
+
+                    

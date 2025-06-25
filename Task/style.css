@@ -1,0 +1,17 @@
+h1{
+    background-color: aquamarine;
+    font-family: fantasy;
+    font-style: italic;
+    text-decoration: underline;
+    text-shadow:20px 10px 10px  rgb(164, 158, 158) ;
+    text-align: center;
+}
+.card:hover{
+    box-shadow: 10px 10px 10px rgb(211, 199, 211) ;
+    animation: bounce 0.6s;
+
+}
+.card{
+    margin-top: 30px;
+
+}
