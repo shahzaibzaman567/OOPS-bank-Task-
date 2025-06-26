@@ -16,7 +16,8 @@ return    this.roboWork[index]
 
 //   using Encapsolation 
 class data extends Robot{
-    #models = ["XR-22", "Clean-MAX", "Defender-X", "Vision-9", "FlyBot-1"];
+    #models = ["XR-22", "Clean-MAX", "Defender-X", "Vision-9", "FlyBot-1", "NeuroBot-Z1"  ,  "HydraCore-88" ,  " GigaClean-R5" ,  "  Sentinel-VX" , "AeroX-900"];
+    
     #i=0
     method(){
         
@@ -36,21 +37,59 @@ class data extends Robot{
  }
 
  let Mod=new data();
- Mod.getprofile();
- Mod.getprofile();
+//  Mod.getprofile();
+//  Mod.getprofile();
 
- let i=0
 
 //   using  genrater function  to show the data of robot and his owner number vise 
+let i=0;
 async function* AIPower(){
 let Res=await fetch("https://jsonplaceholder.typicode.com/users");
 let data=await Res.json();
+for(let user of data){
+let user= data[i++];
+ yield ` ID :  ${user.name }  <br>Name: ${user.id} `    
+   }
+}
 
-// let card=document.querySelector(".card-title");
- yield  data[i++].name
+
+//  button  
+let btn=document.querySelector(".btn")
+let Next = AIPower() ;
+btn.addEventListener("click",async   ()=>{
+
+let next=await Next.next()
+if(!next.done){
+let card=document.querySelector(".card-title");
+
+card.innerHTML=`${Mod.getprofile()} <br>   ${next.value} <br>  `;
+
+}else{
+let btn=document.querySelector(".btn")
+let card=document.querySelector(".card-title");
+
+btn.disabled = true ;
+btn.innerHTML="All robot has loaded "
+card.innerHTML="All Robo has loaded"
+}
 
 
 }
+)
+
+
+
+
+
+
+// Robot  Models 
+// — (AI-based thinking robot)
+
+//  — (multi-tasking heavy-duty robot)
+
+//  — (ultra precision cleaning robot)
+
+// — (security surveillance robot)
 
 
 
